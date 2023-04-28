@@ -1,24 +1,25 @@
-# json-server-base
-
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Projetos Front-end.
-
-## Endpoints
-
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
-
-### Cadastro
-
-POST /register <br/>
-POST /signup <br/>
-POST /users
-
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
-
-
-### Login
-
-POST /login <br/>
-POST /signin
-
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+base URL : https://json-serve-travel-planner.onrender.com
+#LOGIN USER/POST
+post
+baseUrl/login {corpo da requisição}
+#REGISTER USER/POST
+post
+baseUrl/register {corpo da requisição}
+#ACESSAR VIAGEM/GET
+get
+baseUrl/travel token
+"obs - dessa forma só mostra  a viagem em questão"
+#ACESSAR VIAGEM USUÁRIO LOGADO/GET
+GET
+baseUrl/users/{idUser}?_embed=travel + token
+"obs - dessa forma mostra uma key no user logado (travel), e nela tem os dados da viagem
+#CRIAR VIAGEM/POST
+post
+baseUrl/travel {corpo da requisição, dentro do corpo o id do user} + token
+#DELETAR VIAGEM/DELETE
+delete
+baseUrl/tavel/{idViagem} + token
+#EDITAR VIAGEM/PATCH
+patch
+baseUrl/tavel/{idViagem}  {corpo da requisição} + token
+{obs o corpo da requisição pode mandar sem ser completo, exemplo, quero editar só o preço da passagem}
