@@ -1,24 +1,38 @@
 base URL : https://json-serve-travel-planner.onrender.com
+
+
 #LOGIN USER/POST
 post
 baseUrl/login {corpo da requisição}
+
+
 #REGISTER USER/POST
 post
 baseUrl/register {corpo da requisição}
+
+
 #ACESSAR VIAGEM/GET
 get
 baseUrl/travel token
 "obs - dessa forma só mostra  a viagem em questão"
+
+
 #ACESSAR VIAGEM USUÁRIO LOGADO/GET
 GET
 baseUrl/users/{idUser}?_embed=travel + token
 "obs - dessa forma mostra uma key no user logado (travel), e nela tem os dados da viagem
+
+
 #CRIAR VIAGEM/POST
 post
 baseUrl/travel {corpo da requisição, dentro do corpo o id do user} + token
+
+
 #DELETAR VIAGEM/DELETE
 delete
 baseUrl/tavel/{idViagem} + token
+
+
 #EDITAR VIAGEM/PATCH
 patch
 baseUrl/tavel/{idViagem}  {corpo da requisição} + token
