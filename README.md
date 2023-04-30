@@ -37,3 +37,16 @@ baseUrl/tavel/{idViagem} + token
 patch
 baseUrl/tavel/{idViagem}  {corpo da requisição} + token
 {obs o corpo da requisição pode mandar sem ser completo, exemplo, quero editar só o preço da passagem}
+
+
+#ADD VALOR E MÊS/POST
+POST
+baseUrl/savings  {corpo da requisição} + token
+OBS PRECISA QUE O ID DO USUARIO E O ID DO TRAVEL SEJA PASSADO NO CORPO DA REQUISIÇÃO EX:
+{
+	"month": "julho",
+	"value": 900,
+	"userId": 2,
+	"travelId": 2,
+	"id": 3
+}
