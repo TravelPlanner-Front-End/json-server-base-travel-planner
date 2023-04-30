@@ -40,8 +40,8 @@ baseUrl/tavel/{idViagem}  {corpo da requisição} + token
 
 
 #ADD VALOR E MÊS/POST
-POST
 baseUrl/savings  {corpo da requisição} + token
+
 OBS PRECISA QUE O ID DO USUARIO E O ID DO TRAVEL SEJA PASSADO NO CORPO DA REQUISIÇÃO EX:
 {
 	"month": "julho",
