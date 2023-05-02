@@ -29,18 +29,11 @@
       "id": 2,
       "month": "april",
       "initialValue": 300,
-      "tours": 400,
       "accommodation": 500,
       "food": 500,
       "transport": 600,
       "shopping": 700,
       "others": 200
-    },
-    {
-      "nome": "nova viagem",
-      "lugar": "Olinda",
-      "userId": 2,
-      "id": 3
     }
   ]
 }
